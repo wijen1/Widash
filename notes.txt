@@ -1,0 +1,2 @@
+https://www.sitepoint.com/building-custom-right-click-context-menu-javascript/
+https://github.com/isaacplmann/ngx-contextmenu
