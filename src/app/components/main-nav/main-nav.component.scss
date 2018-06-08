@@ -1,0 +1,22 @@
+@import 'variables';
+
+.main-nav {
+  background-color: $nav-light-color;
+  color: $text-light-color;
+  width: 50px;
+  a {
+    color: $text-light-color;
+    outline: none;
+  }
+  fa {
+    font-size: 23px
+  }
+  a:hover {
+    color: $text-light-color + 100;
+  }
+}
+
+
+.active-link {
+  color: $text-light-color + 100 !important;
+}
