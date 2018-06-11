@@ -28,6 +28,8 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { NotesComponent } from './components/notes/notes.component';
+import { ProjectComponent } from './components/project/project.component';
+import {ProjectService} from './services/project.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -45,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectsComponent,
     SettingsComponent,
     TodoComponent,
-    NotesComponent
+    NotesComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

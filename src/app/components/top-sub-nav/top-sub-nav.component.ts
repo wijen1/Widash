@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-top-sub-nav',
@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-sub-nav.component.scss']
 })
 export class TopSubNavComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

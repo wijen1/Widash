@@ -2,13 +2,16 @@
   <div class="pt-2 pb-2 sub-nav-title">
     Projects
   </div>
-  <div class="sub-nav-type">
-    <fa name="caret-down"></fa> <span>Active</span>
-  </div>
-  <div class="sub-nav-projects-container">
-    <ul>
-      <li>Pull raw-data</li>
-      <li class="selected-project">Probe-gateway</li>
-    </ul>
+  <div *ngFor="let projectType of getProjectTypes(); let firstProjectType = first;">
+    <div class="sub-nav-type">
+      <fa name="caret-down"></fa> <span>{{projectType}}</span>
+    </div>
+    <div class="sub-nav-projects-container">
+      <ul>
+        <li *ngFor="let project of orderedProjects[projectType];" routerLink="project/{{project.id}}" routerLinkActive="selected-project" [routerLinkActiveOptions]="{ exact: false }">
+          {{project.name}}
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
