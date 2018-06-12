@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectService} from '../../services/project.service';
-import {Project} from '../../models/project';
 
 @Component({
   selector: 'app-projects',
@@ -8,11 +7,20 @@ import {Project} from '../../models/project';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects: Array<Project>;
+  orderedProjects = {};
 
   constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects();
+    this.projectService.getProjects().forEach(p => {
+      if (!this.orderedProjects[p.status]) {
+        this.orderedProjects[p.status] = [];
+      }
+      this.orderedProjects[p.status].push(p);
+    });
+  }
+
+  getProjectTypes(): Array<string> {
+    return Object.keys(this.orderedProjects);
   }
 }

@@ -21,8 +21,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
-import { SideSubNavComponent } from './components/side-sub-nav/side-sub-nav.component';
-import { TopSubNavComponent } from './components/top-sub-nav/top-sub-nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SettingsComponent } from './pages/settings/settings.component';
@@ -41,8 +39,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     WebviewDirective,
     MainNavComponent,
-    SideSubNavComponent,
-    TopSubNavComponent,
     HomeComponent,
     ProjectsComponent,
     SettingsComponent,

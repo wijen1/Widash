@@ -1,7 +1,15 @@
-<app-top-sub-nav></app-top-sub-nav>
-<div>
-  <app-notes></app-notes>
-  <!--<div class="mt-5 d-flex align-items-center text-dark">-->
-  <!--<h1 class="text-center w-100">Notes UP</h1>-->
-  <!--</div>-->
+
+<div *ngIf="project">
+  <div class="top-sub-nav d-flex">
+    <div class="tab-item"><fa style="color: #FFC66D;" name="list"></fa> {{project.name}}</div>
+    <div class="tab-item active-project-tab"><fa style="color: #CB772F;" name="align-left"></fa> Notes</div>
+    <div class="tab-item"><fa style="color: #CB772F;" name="align-left"></fa> Notes 2</div>
+    <button class="add-project-item-tab"><fa name="plus"></fa></button>
+  </div>
+  <div>
+    <app-notes></app-notes>
+    <!--<div class="mt-5 d-flex align-items-center text-dark">-->
+    <!--<h1 class="text-center w-100">Notes UP</h1>-->
+    <!--</div>-->
+  </div>
 </div>
