@@ -1,20 +1,22 @@
 
 <div *ngIf="project">
-  <div class="top-sub-nav d-flex">
-    <!--<div class="tab-item"><fa style="color: #FFC66D;" name="list"></fa> Todo 1</div>-->
-    <div *ngFor="let todo of project.todoLists; let first = first;" class="tab-item">
-      <fa style="color: #FFC66D;" name="list"></fa> {{todo.name}}
-    </div>
-    <!--<div class="tab-item active-project-tab">-->
-    <div *ngFor="let note of project.noteLists" class="tab-item">
-      <fa style="color: #CB772F;" name="align-left"></fa> {{note.name}}
-    </div>
-    <button class="add-project-item-tab"><fa name="plus"></fa></button>
-  </div>
   <div>
-    <app-notes></app-notes>
-    <!--<div class="mt-5 d-flex align-items-center text-dark">-->
-    <!--<h1 class="text-center w-100">Notes UP</h1>-->
-    <!--</div>-->
+    <ngb-tabset class="project-tabs">
+      <ngb-tab *ngFor="let todo of project.todoLists;">
+        <ng-template ngbTabTitle><fa style="color: #FFC66D;" name="list"></fa> {{todo.name}}</ng-template>
+        <ng-template ngbTabContent>
+          <app-todo></app-todo>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab *ngFor="let note of project.noteLists">
+        <ng-template ngbTabTitle><fa style="color: #CB772F;" name="align-left"></fa> {{note.name}}</ng-template>
+        <ng-template ngbTabContent>
+          <app-notes [note]="note"></app-notes>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab [disabled]="true">
+        <ng-template ngbTabTitle class="button-tab"><button class="add-project-item-tab"><fa name="plus"></fa></button></ng-template>
+      </ngb-tab>
+    </ngb-tabset>
   </div>
 </div>

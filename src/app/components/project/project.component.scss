@@ -1,31 +1,5 @@
 @import 'variables';
 
-.top-sub-nav {
-  background-color: $nav-dark-color;
-  height: 31px;
-}
-
-.tab-item {
-  font-size: small;
-  padding: 6px 12px;
-  color: $text-light-color;
-  background-color: $nav-light-color;
-  border-right: 2px solid $nav-dark-color;
-
-  fa{
-    padding-right: 3px;
-  }
-}
-
-.active-project-tab{
-  background-color: $background-dark-color;
-  color: $text-light-color + 100;
-}
-
-.tab-item:hover {
-  cursor: pointer;
-}
-
 .add-project-item-tab {
   color: $text-light-color;
   background: transparent;

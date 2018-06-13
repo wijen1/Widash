@@ -11,7 +11,7 @@ export class ProjectService {
   private projects: Array<Project> = [
     {id: (Date.now() - 10) + '', name: 'Project 1', status: 'active',
       todoLists: [
-        {id: 't1', name: 'ToDo 1', toDoItems: [
+        {id: 't1', name: 'Todo 1', toDoItems: [
             {id: 'ti1', task: 'Do something, this is active 123', status: ToDoItemStatus.ACTIVE},
             {id: 'ti2', task: 'Do something, this is done', status: ToDoItemStatus.DONE},
             {id: 'ti3', task: 'Do something, this is pending', status: ToDoItemStatus.PENDING},
@@ -25,7 +25,7 @@ export class ProjectService {
     },
     {id: (Date.now() - 20) + '', name: 'Project 2', status: 'active',
       todoLists: [
-        {id: 't2', name: 'My ToDo', toDoItems: [
+        {id: 't2', name: 'My Todo', toDoItems: [
             {id: 'ti5', task: 'This is the first todo 123', status: ToDoItemStatus.ACTIVE},
             {id: 'ti6', task: 'This is the second todo', status: ToDoItemStatus.DONE},
             {id: 'ti7', task: 'This is the last todo', status: ToDoItemStatus.ACTIVE}

@@ -4,3 +4,16 @@
   padding-left: 10px;
   color: $text-light-color;
 }
+
+.edit-note-btn {
+  border-radius: 90px;
+  border: 0;
+  background-color: $blue-dark-color;
+  color: $text-light-color + 40;
+}
+
+.edit-note-btn:hover {
+  cursor: pointer;
+  background-color: $blue-dark-color - 20;
+  color: $text-light-color + 20;
+}
