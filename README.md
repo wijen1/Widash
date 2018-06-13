@@ -2,6 +2,9 @@
 
 # Introduction
 
+### Widash 
+#### Application for handling projects
+
 Currently runs with:
 
 - Angular v6.0.3
